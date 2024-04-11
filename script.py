@@ -13,6 +13,9 @@ ventana.configure(background = "#9b9b9b")
 FuenteTitulo = Font(family = "Montserrat", size = 26, weight = "bold")
 FuenteContexto = Font(family = "Montserrat",size = 13, weight = "normal" )
 
+#Canva
+canva = Canvas(width = 380, height = 200, bg = "blue")
+canva.place(x = 150, y = 180)
 #Titulo
 Titulo = tkinter.Label(ventana, text = "Calculadora de IMC", font=FuenteTitulo, background = "#9b9b9b")
 Titulo.place(x = 142, y = 20)
