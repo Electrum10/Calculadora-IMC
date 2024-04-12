@@ -42,4 +42,9 @@ GeneroElegir = ttk.Combobox(ventana, state="readonly", values=["Hombre", "Mujer"
 Edad = tkinter.Label(ventana, text = "Edad",font= FuenteVentana, bg=ColorCaja).place(x=325, y=165)
 EdadElegir = tkinter.Entry(ventana, width=10, font = FuenteSeleccion).place(x = 385, y = 164)
 
+#Peso y altura
+Peso = tkinter.Label(ventana, text = "Peso", font = FuenteVentana, bg= ColorCaja).place(x=103, y = 210)
+PesoElegir = tkinter.Entry(ventana,width=10, font = FuenteSeleccion).place(x=180, y= 210)
+#--#
+Altura = tkinter.Label(ventana, text = "Altura",font = FuenteVentana, bg = ColorCaja).place(x=103, y = 300)
 ventana.mainloop()
