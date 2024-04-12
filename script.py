@@ -18,6 +18,9 @@ FuenteSeleccion = Font(family= "Montserrat", size = 14, weight= "normal")
 #Color
 ColorCaja = "#c4d2e7"
 
+#Función
+
+
 #Canva
 frame = tkinter.Frame(ventana, width=460, height=200)
 frame.place(x = 70, y = 140)
@@ -32,10 +35,11 @@ Titulo.place(x = 142, y = 20)
 Contexto = tkinter.Label(ventana, text = "Descubre tu indice IMC para saber si estas como una vaca (o no)", background = "#9b9b9b", font = FuenteContexto)
 Contexto.place(x=77,y=65)
 
-#Edad y genero
-Genero = tkinter.Label(ventana, text = "Género", font= FuenteVentana, bg = ColorCaja)
-Genero.place(x=95, y=165)
-GeneroElegir = ttk.Combobox(ventana, state="readonly", values=["Hombre", "Mujer"], width= 8, font=FuenteSeleccion)
-GeneroElegir.place(x = 180, y = 166)
+#Genero y edad
+Genero = tkinter.Label(ventana, text = "Género", font= FuenteVentana, bg = ColorCaja).place(x=95, y=165)
+GeneroElegir = ttk.Combobox(ventana, state="readonly", values=["Hombre", "Mujer"], width= 8, font=FuenteSeleccion).place(x = 180, y = 166)
+#--#
+Edad = tkinter.Label(ventana, text = "Edad",font= FuenteVentana, bg=ColorCaja).place(x=325, y=165)
+EdadElegir = tkinter.Entry(ventana, width=10, font = FuenteSeleccion).place(x = 385, y = 164)
 
 ventana.mainloop()
