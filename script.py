@@ -19,7 +19,13 @@ FuenteSeleccion = Font(family= "Montserrat", size = 14, weight= "normal")
 ColorCaja = "#c4d2e7"
 
 #Función
-
+def Calcular():
+    G = GeneroElegir.get()
+    E = EdadElegir.get()
+    P = PesoElegir.get()
+    A = AlturaElegir.get()
+    Resultado = P/A^2
+    print(Resultado)
 
 #Canva
 frame = tkinter.Frame(ventana, width=460, height=200)
@@ -28,12 +34,10 @@ frame.config(bg= ColorCaja)
 frame.config(bd=25, relief="solid", borderwidth=4)
 
 #Titulo
-Titulo = tkinter.Label(ventana, text = "Calculadora de IMC", font=FuenteTitulo, background = "#9b9b9b")
-Titulo.place(x = 142, y = 20)
+Titulo = tkinter.Label(ventana, text = "Calculadora de IMC", font=FuenteTitulo, background = "#9b9b9b").place(x = 142, y = 20)
 
 #Descripción
-Contexto = tkinter.Label(ventana, text = "Descubre tu indice IMC para saber si estas como una vaca (o no)", background = "#9b9b9b", font = FuenteContexto)
-Contexto.place(x=77,y=65)
+Contexto = tkinter.Label(ventana, text = "Descubre tu indice IMC para saber si estas como una vaca (o no)", background = "#9b9b9b", font = FuenteContexto).place(x=77,y=65)
 
 #Genero y edad
 Genero = tkinter.Label(ventana, text = "Género", font= FuenteVentana, bg = ColorCaja).place(x=95, y=165)
@@ -50,7 +54,7 @@ Altura = tkinter.Label(ventana, text = "Altura",font = FuenteVentana, bg = Color
 AlturaElegir = tkinter.Entry(ventana, width=10, font = FuenteSeleccion).place(x=385, y= 208)
 
 #Botón
-Boton = tkinter.Button(ventana, text = "Calcula", width = 20, height= 3).place(x = 234, y = 260)
+Boton = ttk.Button(ventana, text = "Calcula", width = 20,command= Calcular).place(x = 234, y = 260)
 
 
 
