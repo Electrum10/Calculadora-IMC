@@ -46,5 +46,12 @@ EdadElegir = tkinter.Entry(ventana, width=10, font = FuenteSeleccion).place(x = 
 Peso = tkinter.Label(ventana, text = "Peso", font = FuenteVentana, bg= ColorCaja).place(x=103, y = 210)
 PesoElegir = tkinter.Entry(ventana,width=10, font = FuenteSeleccion).place(x=180, y= 210)
 #--#
-Altura = tkinter.Label(ventana, text = "Altura",font = FuenteVentana, bg = ColorCaja).place(x=103, y = 300)
+Altura = tkinter.Label(ventana, text = "Altura",font = FuenteVentana, bg = ColorCaja).place(x=320, y = 205)
+AlturaElegir = tkinter.Entry(ventana, width=10, font = FuenteSeleccion).place(x=385, y= 208)
+
+#Botón
+Boton = tkinter.Button(ventana, text = "Calcula", width = 20, height= 3).place(x = 234, y = 260)
+
+
+
 ventana.mainloop()
