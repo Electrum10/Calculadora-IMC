@@ -31,7 +31,7 @@ def Calcular():
     ResultadoTexto = tkinter.StringVar()
     ResultadoTexto.set(f"Tu IMC es de " + str(Resultado))
     TextoResultado = tkinter.Label(ventana, textvariable=ResultadoTexto)
-    TextoResultado.place(x = 130, y = 240)
+    TextoResultado.place(x = 234, y = 290)
 
 #Canva
 frame = tkinter.Frame(ventana, width=460, height=200)
