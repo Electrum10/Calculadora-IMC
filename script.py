@@ -66,7 +66,7 @@ AlturaElegir.place(x=385, y= 208)
 #Botón
 Boton = ttk.Button(ventana, text = "Calcula", width = 20,command= Calcular).place(x = 234, y = 260)
 
-#Resultado
+
 
 
 ventana.mainloop()
