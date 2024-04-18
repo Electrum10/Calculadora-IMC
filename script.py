@@ -2,7 +2,6 @@ import tkinter
 from tkinter import *
 from tkinter import ttk
 from tkinter.font import Font
-from tkinter import messagebox
 
 #Configuración basica
 ventana = tkinter.Tk()
@@ -32,6 +31,9 @@ def Calcular():
     ResultadoTexto.set(f"Tu IMC es de " + str(Resultado))
     TextoResultado = tkinter.Label(ventana, textvariable=ResultadoTexto)
     TextoResultado.place(x = 234, y = 290)
+    lista = []
+    lista.append(E)
+    lista.append(G)
 
 #Canva
 frame = tkinter.Frame(ventana, width=460, height=200)
