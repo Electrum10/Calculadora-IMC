@@ -20,8 +20,6 @@ ColorCaja = "#c4d2e7"
 
 #Función
 def Calcular():
-    G = GeneroElegir.current()
-    E = int(EdadElegir.get())
     P = int(PesoElegir.get())
     A = int(AlturaElegir.get())
     AFinal = A**2
@@ -31,9 +29,6 @@ def Calcular():
     ResultadoTexto.set(f"Tu IMC es de " + str(Resultado))
     TextoResultado = tkinter.Label(ventana, textvariable=ResultadoTexto)
     TextoResultado.place(x = 234, y = 290)
-    lista = []
-    lista.append(E)
-    lista.append(G)
 
 #Canva
 frame = tkinter.Frame(ventana, width=460, height=200)
@@ -47,15 +42,6 @@ Titulo = tkinter.Label(ventana, text = "Calculadora de IMC", font=FuenteTitulo, 
 #Descripción
 Contexto = tkinter.Label(ventana, text = "Descubre tu indice IMC para saber si estas como una vaca (o no)", background = "#9b9b9b", font = FuenteContexto).place(x=77,y=65)
 
-#Genero y edad
-Genero = tkinter.Label(ventana, text = "Género", font= FuenteVentana, bg = ColorCaja).place(x=95, y=165)
-GeneroElegir = ttk.Combobox(ventana, values=["Hombre", "Mujer"], width= 8, font=FuenteSeleccion, state="readonly")
-GeneroElegir.place(x = 180, y = 166)
-#--#
-Edad = tkinter.Label(ventana, text = "Edad",font= FuenteVentana, bg=ColorCaja).place(x=325, y=165)
-EdadElegir = tkinter.Entry(ventana, width=10, font = FuenteSeleccion)
-EdadElegir.place(x = 385, y = 164)
-
 #Peso y altura
 Peso = tkinter.Label(ventana, text = "Peso", font = FuenteVentana, bg= ColorCaja).place(x=103, y = 210)
 PesoElegir = tkinter.Entry(ventana,width=10, font = FuenteSeleccion)
@@ -67,8 +53,5 @@ AlturaElegir.place(x=385, y= 208)
 
 #Botón
 Boton = ttk.Button(ventana, text = "Calcula", width = 20,command= Calcular).place(x = 234, y = 260)
-
-
-
 
 ventana.mainloop()
