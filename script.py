@@ -21,9 +21,9 @@ ColorCaja = "#c4d2e7"
 #Función
 def Calcular():
     P = int(PesoElegir.get())
-    A = int(AlturaElegir.get())
-    AFinal = A**2
-    Resultado = P/AFinal
+    A = float(AlturaElegir.get())
+    AA = A*A
+    Resultado = P/AA
     print(Resultado)
     ResultadoTexto = tkinter.StringVar()
     ResultadoTexto.set(f"Tu IMC es de " + str(Resultado))
