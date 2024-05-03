@@ -11,19 +11,43 @@ ventana.title("Calculadora IMC")
 ventana.configure(background = "#9b9b9b")
 
 #Configuración menú
+## Declaro menú
 barra_menus = tkinter.Menu()
-menu_archivo = tkinter.Menu(barra_menus, tearoff=False)
-menu_archivo.add_command(
+
+## Declaro submenú de peso y altura
+menu_peso = tkinter.Menu(barra_menus, tearoff=False)
+menu_altura = tkinter.Menu(barra_menus, tearoff=False)
+
+## Declaro los botones dentro de los submenús
+### Kg
+menu_peso.add_command(
     label="Kg",
     accelerator="Ctrl+N",
     compound=tkinter.LEFT
 )
-menu_archivo.add_command(
+### Lb
+menu_peso.add_command(
     label="Lb",
     accelerator="Ctrl+S",
     compound=tkinter.LEFT
 )
-barra_menus.add_cascade(menu=menu_archivo, label="Peso")
+### Cm
+menu_altura.add_command(
+    label= "cm",
+    accelerator="Ctrl+S",
+    compound=tkinter.LEFT
+)
+### Pies
+menu_altura.add_command(
+    label= "Pies",
+    accelerator="Ctrl+S",
+    compound=tkinter.LEFT
+)
+
+## Asigno cada submenú al menú principal
+barra_menus.add_cascade(menu=menu_peso, label="Peso")
+barra_menus.add_cascade(menu=menu_altura, label="Altura")
+## Declaro que se muestre en pantalla
 ventana.config(menu=barra_menus)
 
 
