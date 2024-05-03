@@ -14,11 +14,16 @@ ventana.configure(background = "#9b9b9b")
 barra_menus = tkinter.Menu()
 menu_archivo = tkinter.Menu(barra_menus, tearoff=False)
 menu_archivo.add_command(
-    label="Nuevo",
+    label="Kg",
     accelerator="Ctrl+N",
     compound=tkinter.LEFT
 )
-barra_menus.add_cascade(menu=menu_archivo, label="Archivo")
+menu_archivo.add_command(
+    label="Lb",
+    accelerator="Ctrl+S",
+    compound=tkinter.LEFT
+)
+barra_menus.add_cascade(menu=menu_archivo, label="Peso")
 ventana.config(menu=barra_menus)
 
 
