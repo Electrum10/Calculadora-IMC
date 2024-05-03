@@ -1,10 +1,10 @@
-#Importar Librerias
+#Importar Librerías
 import tkinter
 from tkinter import *
 from tkinter import ttk
 from tkinter.font import Font
 
-#Configuración basica
+#Configuración básica
 ventana = tkinter.Tk()
 ventana.geometry("600x400")
 ventana.title("Calculadora IMC")
@@ -14,11 +14,11 @@ ventana.configure(background = "#9b9b9b")
 ## Declaro menú
 barra_menus = tkinter.Menu()
 
-## Declaro submenú de peso y altura
+## Declaro submenu de peso y altura
 menu_peso = tkinter.Menu(barra_menus, tearoff=False)
 menu_altura = tkinter.Menu(barra_menus, tearoff=False)
 
-## Declaro los botones dentro de los submenús
+## Declaro los botones dentro de los submenus
 ### Kg
 menu_peso.add_command(
     label="Kg",
@@ -44,7 +44,7 @@ menu_altura.add_command(
     compound=tkinter.LEFT
 )
 
-## Asigno cada submenú al menú principal
+## Asigno cada submenu al menú principal
 barra_menus.add_cascade(menu=menu_peso, label="Peso")
 barra_menus.add_cascade(menu=menu_altura, label="Altura")
 ## Declaro que se muestre en pantalla
@@ -55,7 +55,7 @@ ventana.config(menu=barra_menus)
 FuenteTitulo = Font(family = "Montserrat", size = 27, weight = "bold")
 FuenteContexto = Font(family = "Montserrat",size = 12, weight = "normal")
 FuenteVentana = Font(family = "Montserrat", size = 16, weight= "normal")
-FuenteSeleccion = Font(family= "Montserrat", size = 14, weight= "normal")
+FuenteSelección = Font(family= "Montserrat", size = 14, weight= "normal")
 FuenteResultado = Font(family = "Montserrat", size = 18, weight= "normal")
 
 #Configuración Colores
@@ -87,18 +87,18 @@ Contexto = tkinter.Label(ventana, text = "Descubre tu indice IMC para saber si e
 
 #Peso
 Peso = tkinter.Label(ventana, text = "Peso", font = FuenteVentana, bg= ColorCaja).place(x=103, y = 180)
-PesoElegir = tkinter.Entry(ventana,width=10, font = FuenteSeleccion)
+PesoElegir = tkinter.Entry(ventana,width=10, font = FuenteSelección)
 PesoElegir.place(x=165, y= 180)
 
 
 #Altura
 Altura = tkinter.Label(ventana, text = "Altura",font = FuenteVentana, bg = ColorCaja).place(x=320, y = 180)
-AlturaElegir = tkinter.Entry(ventana, width=10, font = FuenteSeleccion)
+AlturaElegir = tkinter.Entry(ventana, width=10, font = FuenteSelección)
 AlturaElegir.place(x=385, y= 180)
 
 
 #Botón
-Boton = ttk.Button(ventana, text = "Calcula", width = 20,command= Calcular).place(x = 234, y = 230)
+Botón = ttk.Button(ventana, text = "Calcula", width = 20,command= Calcular).place(x = 234, y = 230)
 
 
 ventana.mainloop()
